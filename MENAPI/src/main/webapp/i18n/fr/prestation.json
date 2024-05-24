@@ -1,0 +1,47 @@
+{
+  "menapiApp": {
+    "prestation": {
+      "home": {
+        "title": "Prestations",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Prestation",
+        "createOrEditLabel": "Créer ou éditer un Prestation",
+        "search": "Recherche pour Prestation",
+        "notFound": "Aucun Prestation trouvé"
+      },
+      "created": "Un nouveau Prestation a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Prestation avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Prestation avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Prestation {{ id }} ?"
+      },
+      "detail": {
+        "title": "Prestation"
+      },
+      "id": "ID",
+      "nomPrestation": "Nom Prestation",
+      "nomUtilisateur": "Nom Utilisateur",
+      "nomMission": "Nom Mission",
+      "nomClient": "Nom Client",
+      "ecUnite": "Ec Unite",
+      "ecMensuelle": "Ec Mensuelle",
+      "ecTotale": "Ec Totale",
+      "ecTransportMensuel": "Ec Transport Mensuel",
+      "ecFabMateriel": "Ec Fab Materiel",
+      "ecUtilMaterielMensuel": "Ec Util Materiel Mensuel",
+      "ecCommMensuel": "Ec Comm Mensuel",
+      "nbrProfils": "Nbr Profils",
+      "dureeMois": "Duree Mois",
+      "dateDebut": "Date Debut",
+      "dateFin": "Date Fin",
+      "typePresta": "Type Presta",
+      "lieupresta": "Lieupresta",
+      "donneesSaisies": "Donnees Saisies",
+      "donneesReperes": "Donnees Reperes",
+      "prestationProfil": "Prestation Profil",
+      "transportProfil": "Transport Profil",
+      "deplacementProfil": "Deplacement Profil",
+      "materielProfil": "Materiel Profil"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity DeplacementProfil.
+    -->
+    <changeSet id="20240524081224-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="deplacement_profil_id"
+                                 baseTableName="rel_deplacement_profil__profil"
+                                 constraintName="fk_rel_deplacement_profil__profil__deplacement_profil_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="deplacement_profil"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="profil_id"
+                                 baseTableName="rel_deplacement_profil__profil"
+                                 constraintName="fk_rel_deplacement_profil__profil__profil_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profil"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="deplacement_profil_id"
+                                 baseTableName="rel_deplacement_profil__prestation"
+                                 constraintName="fk_rel_deplacement_profil__prestation__deplacement_profil_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="deplacement_profil"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="prestation_id"
+                                 baseTableName="rel_deplacement_profil__prestation"
+                                 constraintName="fk_rel_deplacement_profil__prestation__prestation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="prestation"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="deplacement_profil_id"
+                                 baseTableName="rel_deplacement_profil__transport"
+                                 constraintName="fk_rel_deplacement_profil__transport__deplacement_profil_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="deplacement_profil"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="transport_id"
+                                 baseTableName="rel_deplacement_profil__transport"
+                                 constraintName="fk_rel_deplacement_profil__transport__transport_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="transport"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity PrestationProfil.
+    -->
+    <changeSet id="20240524081222-1" author="jhipster">
+        <createTable tableName="prestation_profil">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nb_mois_presta" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_sem_conges_estime" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="duree_hebdo" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="duree_teletravail" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="duree_reu_audio" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="duree_reu_visio" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_mails_sans_pj" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_mails_avec_pj" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="veille_pause" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="veille_soir" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="veille_weekend" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_terminaux" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="nb_deplacements" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_mensuelle" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_totale_preta" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_transport_mensuel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_fab_materiel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_util_materiel_mensuel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_comm_mensuel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="profil_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20240524081222-1-relations" author="jhipster">
+
+        <createTable tableName="rel_prestation_profil__prestation">
+            <column name="prestation_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="prestation_profil_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="prestation_profil_id, prestation_id" tableName="rel_prestation_profil__prestation"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240524081222-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/prestation_profil.csv"
+                  separator=";"
+                  tableName="prestation_profil"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="nb_mois_presta" type="numeric"/>
+            <column name="nb_sem_conges_estime" type="numeric"/>
+            <column name="duree_hebdo" type="numeric"/>
+            <column name="duree_teletravail" type="numeric"/>
+            <column name="duree_reu_audio" type="numeric"/>
+            <column name="duree_reu_visio" type="numeric"/>
+            <column name="nb_mails_sans_pj" type="numeric"/>
+            <column name="nb_mails_avec_pj" type="numeric"/>
+            <column name="veille_pause" type="boolean"/>
+            <column name="veille_soir" type="boolean"/>
+            <column name="veille_weekend" type="boolean"/>
+            <column name="nb_terminaux" type="numeric"/>
+            <column name="nb_deplacements" type="numeric"/>
+            <column name="ec_mensuelle" type="numeric"/>
+            <column name="ec_totale_preta" type="numeric"/>
+            <column name="ec_transport_mensuel" type="numeric"/>
+            <column name="ec_fab_materiel" type="numeric"/>
+            <column name="ec_util_materiel_mensuel" type="numeric"/>
+            <column name="ec_comm_mensuel" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

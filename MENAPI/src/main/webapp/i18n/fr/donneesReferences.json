@@ -1,0 +1,28 @@
+{
+  "menapiApp": {
+    "donneesReferences": {
+      "home": {
+        "title": "DonneesReferences",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Donnees References",
+        "createOrEditLabel": "Créer ou éditer un Donnees References",
+        "search": "Recherche pour Donnees References",
+        "notFound": "Aucun Donnees References trouvé"
+      },
+      "created": "Un nouveau Donnees References a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Donnees References avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Donnees References avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Donnees References {{ id }} ?"
+      },
+      "detail": {
+        "title": "Donnees References"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "donneeReference": "Donnee Reference",
+      "unite": "Unite",
+      "temporalite": "Temporalite"
+    }
+  }
+}

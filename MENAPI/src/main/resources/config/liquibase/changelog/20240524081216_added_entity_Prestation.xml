@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Prestation.
+    -->
+    <changeSet id="20240524081216-1" author="jhipster">
+        <createTable tableName="prestation" remarks="Entité Prestation">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nom_prestation" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="nom_utilisateur" type="varchar(150)">
+                <constraints nullable="false" />
+            </column>
+            <column name="nom_mission" type="varchar(150)">
+                <constraints nullable="false" />
+            </column>
+            <column name="nom_client" type="varchar(150)">
+                <constraints nullable="false" />
+            </column>
+            <column name="ec_unite" type="varchar(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="ec_mensuelle" type="${floatType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="ec_totale" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_transport_mensuel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_fab_materiel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_util_materiel_mensuel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="ec_comm_mensuel" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="nbr_profils" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="duree_mois" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="date_debut" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="date_fin" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="type_presta" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="lieupresta" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="donnees_saisies" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <column name="donnees_reperes" type="boolean">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240524081216-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/prestation.csv"
+                  separator=";"
+                  tableName="prestation"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="nom_prestation" type="string"/>
+            <column name="nom_utilisateur" type="string"/>
+            <column name="nom_mission" type="string"/>
+            <column name="nom_client" type="string"/>
+            <column name="ec_unite" type="string"/>
+            <column name="ec_mensuelle" type="numeric"/>
+            <column name="ec_totale" type="numeric"/>
+            <column name="ec_transport_mensuel" type="numeric"/>
+            <column name="ec_fab_materiel" type="numeric"/>
+            <column name="ec_util_materiel_mensuel" type="numeric"/>
+            <column name="ec_comm_mensuel" type="numeric"/>
+            <column name="nbr_profils" type="numeric"/>
+            <column name="duree_mois" type="numeric"/>
+            <column name="date_debut" type="date"/>
+            <column name="date_fin" type="date"/>
+            <column name="type_presta" type="string"/>
+            <column name="lieupresta" type="string"/>
+            <column name="donnees_saisies" type="boolean"/>
+            <column name="donnees_reperes" type="boolean"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

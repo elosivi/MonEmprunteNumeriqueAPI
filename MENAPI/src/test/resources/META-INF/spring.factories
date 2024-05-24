@@ -1,0 +1,3 @@
+org.springframework.test.context.ContextCustomizerFactory = com.aubay.men.\
+    config.SqlTestContainersSpringContextCustomizerFactory,com.aubay.men.config.\
+    TestContainersSpringContextCustomizerFactory

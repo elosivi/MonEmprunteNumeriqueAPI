@@ -1,0 +1,10 @@
+{
+  "menapiApp": {
+    "TypeMoteur": {
+      "null": "",
+      "THERMIQUE": "THERMIQUE",
+      "ELECTRIQUE": "ELECTRIQUE",
+      "MIXTE": "MIXTE"
+    }
+  }
+}

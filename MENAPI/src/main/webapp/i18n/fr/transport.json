@@ -1,0 +1,29 @@
+{
+  "menapiApp": {
+    "transport": {
+      "home": {
+        "title": "Transports",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Transport",
+        "createOrEditLabel": "Créer ou éditer un Transport",
+        "search": "Recherche pour Transport",
+        "notFound": "Aucun Transport trouvé"
+      },
+      "created": "Un nouveau Transport a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Transport avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Transport avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Transport {{ id }} ?"
+      },
+      "detail": {
+        "title": "Transport"
+      },
+      "id": "ID",
+      "categorie": "Categorie",
+      "typeMoteur": "Type Moteur",
+      "feKm": "Fe Km",
+      "transportProfil": "Transport Profil",
+      "deplacementProfil": "Deplacement Profil"
+    }
+  }
+}

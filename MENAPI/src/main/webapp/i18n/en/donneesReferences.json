@@ -1,0 +1,28 @@
+{
+  "menapiApp": {
+    "donneesReferences": {
+      "home": {
+        "title": "Donnees References",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Donnees References",
+        "createOrEditLabel": "Create or edit a Donnees References",
+        "search": "Search for Donnees References",
+        "notFound": "No Donnees References found"
+      },
+      "created": "A new Donnees References is created with identifier {{ param }}",
+      "updated": "A Donnees References is updated with identifier {{ param }}",
+      "deleted": "A Donnees References is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Donnees References {{ id }}?"
+      },
+      "detail": {
+        "title": "Donnees References"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "donneeReference": "Donnee Reference",
+      "unite": "Unite",
+      "temporalite": "Temporalite"
+    }
+  }
+}

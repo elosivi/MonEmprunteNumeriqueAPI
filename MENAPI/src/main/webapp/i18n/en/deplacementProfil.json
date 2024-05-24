@@ -1,0 +1,29 @@
+{
+  "menapiApp": {
+    "deplacementProfil": {
+      "home": {
+        "title": "Deplacement Profils",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Deplacement Profil",
+        "createOrEditLabel": "Create or edit a Deplacement Profil",
+        "search": "Search for Deplacement Profil",
+        "notFound": "No Deplacement Profils found"
+      },
+      "created": "A new Deplacement Profil is created with identifier {{ param }}",
+      "updated": "A Deplacement Profil is updated with identifier {{ param }}",
+      "deleted": "A Deplacement Profil is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Deplacement Profil {{ id }}?"
+      },
+      "detail": {
+        "title": "Deplacement Profil"
+      },
+      "id": "ID",
+      "nbDeplacement": "Nb Deplacement",
+      "kmPresta": "Km Presta",
+      "profil": "Profil",
+      "prestation": "Prestation",
+      "transport": "Transport"
+    }
+  }
+}

@@ -1,0 +1,194 @@
+
+/**
+ * Entité User.
+ */
+entity User {
+	nom String required minlength(3) maxlength(50)
+	prenom String required minlength(3) maxlength(50)
+	email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+	login String required minlength(3) maxlength(50)
+    password String required minlength(8) maxlength(50)
+}
+
+/**
+ * TEntité profil
+ */
+entity Profil {
+	nom String  minlength(3) maxlength(50)
+	prenom String  minlength(3) maxlength(50)
+	email String required
+}
+
+entity Fonction{
+	libelle String  minlength(3) maxlength(100)
+}
+/**
+* Entité Prestation
+*/
+entity Prestation{
+      nomPrestation String required minlength(3) maxlength(100)
+      nomUtilisateur String required minlength(3) maxlength(150)
+      nomMission String required minlength(3) maxlength(150)
+      nomClient String required minlength(3) maxlength(150)
+      ecUnite String required minlength(1) maxlength(50)
+      ecMensuelle Float required
+      ecTotale Float min(0)
+      ecTransportMensuel Float min(0)
+      ecFabMateriel Float min(0)
+      ecUtilMaterielMensuel Float min(0)
+      ecCommMensuel Float min(0)
+      nbrProfils Integer required min(0)
+      dureeMois Integer required min(0)
+      dateDebut LocalDate
+      dateFin LocalDate
+      typePresta TypePresta required 
+      lieupresta LieuPresta required
+      donneesSaisies Boolean
+      donneesReperes Boolean
+}
+
+/**
+* Référentiel des moyens de transports utilisables
+*/
+entity Transport{
+	categorie String required minlength(2) maxlength(100)
+    typeMoteur TypeMoteur 
+    feKm Float min(0)
+}
+
+/*
+* table référentiel sur le materiel IT et ses FE
+*/
+entity Materiel{
+	libelle String required minlength(2) maxlength(100)
+    feVeille Float min(0)
+}
+
+
+
+entity Communication {
+	libelle String required minlength(2) maxlength(200)
+    fe Float min(0)
+    feUnite String minlength(1) maxlength(100)
+}
+
+entity Unite{
+	libelle String required minlength(1) maxlength(100)
+    estTemporelle Boolean
+}
+
+entity DonneesReferences{
+	libelle String required minlength(1) maxlength(100)
+    donneeReference Integer
+}
+
+
+
+
+
+/*
+* Table de lien entre les profils et les prestations
+* répertorie les besoins de chaque profil pour la prestation.
+*/
+
+entity PrestationProfil{
+	nbMoisPresta Integer  min(0)
+    nbSemCongesEstime Integer  min(0)
+    dureeHebdo Integer  min(0)
+    dureeTeletravail Integer  min(0)
+    dureeReuAudio Float min(0)
+    dureeReuVisio Float min(0)
+    nbMailsSansPJ Integer min(0)
+    nbMailsAvecPJ Integer min(0)
+    veillePause Boolean 
+    veilleSoir Boolean
+    veilleWeekend Boolean
+    nbTerminaux Integer min(0)
+    nbDeplacements Integer min(0)
+    ecMensuelle Float min(0)
+    ecTotalePreta Float min(0)
+    ecTransportMensuel Float min(0)
+    ecFabMateriel Float min(0)
+    ecUtilMaterielMensuel Float min(0)
+    ecCommMensuel Float min(0)
+}
+
+/*
+* Table de lien entre les profils et les moyens de transports qu'ils utilisent
+*/
+entity TransportProfil{
+	nbHebdo Integer min(0) 
+    kmHebdo Integer min(0)
+}
+
+/*
+*Table de lien entre les profils et leurs déplacements lors de la prestation
+*/
+entity DeplacementProfil{
+	nbDeplacement Integer min(0)
+    kmPresta Integer min(0)
+}
+
+entity MaterielProfil{
+	dureeHebdo Integer min(0)
+    estNeuf Boolean 
+}
+
+
+
+
+
+
+
+
+/*
+* Enum des type de prestation valides
+*/
+enum TypePresta{
+	REG, FOR
+}
+/*
+* Enum des lieux de prestation valides
+*/
+enum LieuPresta{
+	CLI, CDS
+}
+/*
+* Enum des type de motorisation
+*/
+enum TypeMoteur{
+	THERMIQUE, ELECTRIQUE, MIXTE
+}
+
+relationship ManyToMany {
+	PrestationProfil{prestation} to Prestation
+    TransportProfil{profil} to Profil
+    TransportProfil{prestation} to Prestation
+    TransportProfil{transport} to Transport
+	DeplacementProfil{profil} to Profil
+    DeplacementProfil{prestation} to Prestation
+    DeplacementProfil{transport} to Transport
+    MaterielProfil{profil} to Profil
+    MaterielProfil{prestation} to Prestation
+    MaterielProfil{materiel} to Materiel
+}
+
+relationship ManyToOne {
+	PrestationProfil{profil} to Profil
+    Communication{unite} to Unite
+	DonneesReferences{unite} to Unite
+    DonneesReferences{temporalite} to Unite
+    Profil{fonction} to Fonction
+}
+
+
+/**
+*options
+*/
+
+dto * with mapstruct 
+service * with serviceClass
+search * with elasticsearch
+paginate * with pagination
+
+

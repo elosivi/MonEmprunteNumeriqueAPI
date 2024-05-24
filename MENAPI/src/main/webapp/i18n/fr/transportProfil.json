@@ -1,0 +1,29 @@
+{
+  "menapiApp": {
+    "transportProfil": {
+      "home": {
+        "title": "TransportProfils",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Transport Profil",
+        "createOrEditLabel": "Créer ou éditer un Transport Profil",
+        "search": "Recherche pour Transport Profil",
+        "notFound": "Aucun Transport Profil trouvé"
+      },
+      "created": "Un nouveau Transport Profil a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Transport Profil avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Transport Profil avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Transport Profil {{ id }} ?"
+      },
+      "detail": {
+        "title": "Transport Profil"
+      },
+      "id": "ID",
+      "nbHebdo": "Nb Hebdo",
+      "kmHebdo": "Km Hebdo",
+      "profil": "Profil",
+      "prestation": "Prestation",
+      "transport": "Transport"
+    }
+  }
+}

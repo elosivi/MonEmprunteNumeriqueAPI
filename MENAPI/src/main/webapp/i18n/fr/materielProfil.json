@@ -1,0 +1,29 @@
+{
+  "menapiApp": {
+    "materielProfil": {
+      "home": {
+        "title": "MaterielProfils",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Materiel Profil",
+        "createOrEditLabel": "Créer ou éditer un Materiel Profil",
+        "search": "Recherche pour Materiel Profil",
+        "notFound": "Aucun Materiel Profil trouvé"
+      },
+      "created": "Un nouveau Materiel Profil a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Materiel Profil avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Materiel Profil avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Materiel Profil {{ id }} ?"
+      },
+      "detail": {
+        "title": "Materiel Profil"
+      },
+      "id": "ID",
+      "dureeHebdo": "Duree Hebdo",
+      "estNeuf": "Est Neuf",
+      "profil": "Profil",
+      "prestation": "Prestation",
+      "materiel": "Materiel"
+    }
+  }
+}

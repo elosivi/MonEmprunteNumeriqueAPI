@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity PrestationProfil.
+    -->
+    <changeSet id="20240524081222-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="profil_id"
+                                 baseTableName="prestation_profil"
+                                 constraintName="fk_prestation_profil__profil_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profil"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="prestation_profil_id"
+                                 baseTableName="rel_prestation_profil__prestation"
+                                 constraintName="fk_rel_prestation_profil__prestation__prestation_profil_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="prestation_profil"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="prestation_id"
+                                 baseTableName="rel_prestation_profil__prestation"
+                                 constraintName="fk_rel_prestation_profil__prestation__prestation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="prestation"
+                                 />
+    </changeSet>
+</databaseChangeLog>

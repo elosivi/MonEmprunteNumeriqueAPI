@@ -1,0 +1,28 @@
+{
+  "menapiApp": {
+    "communication": {
+      "home": {
+        "title": "Communications",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Communication",
+        "createOrEditLabel": "Créer ou éditer un Communication",
+        "search": "Recherche pour Communication",
+        "notFound": "Aucun Communication trouvé"
+      },
+      "created": "Un nouveau Communication a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Communication avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Communication avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Communication {{ id }} ?"
+      },
+      "detail": {
+        "title": "Communication"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "fe": "Fe",
+      "feUnite": "Fe Unite",
+      "unite": "Unite"
+    }
+  }
+}

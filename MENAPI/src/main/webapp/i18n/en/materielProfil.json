@@ -1,0 +1,29 @@
+{
+  "menapiApp": {
+    "materielProfil": {
+      "home": {
+        "title": "Materiel Profils",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Materiel Profil",
+        "createOrEditLabel": "Create or edit a Materiel Profil",
+        "search": "Search for Materiel Profil",
+        "notFound": "No Materiel Profils found"
+      },
+      "created": "A new Materiel Profil is created with identifier {{ param }}",
+      "updated": "A Materiel Profil is updated with identifier {{ param }}",
+      "deleted": "A Materiel Profil is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Materiel Profil {{ id }}?"
+      },
+      "detail": {
+        "title": "Materiel Profil"
+      },
+      "id": "ID",
+      "dureeHebdo": "Duree Hebdo",
+      "estNeuf": "Est Neuf",
+      "profil": "Profil",
+      "prestation": "Prestation",
+      "materiel": "Materiel"
+    }
+  }
+}

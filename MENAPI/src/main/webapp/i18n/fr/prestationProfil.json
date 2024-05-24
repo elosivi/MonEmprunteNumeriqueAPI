@@ -1,0 +1,45 @@
+{
+  "menapiApp": {
+    "prestationProfil": {
+      "home": {
+        "title": "PrestationProfils",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Prestation Profil",
+        "createOrEditLabel": "Créer ou éditer un Prestation Profil",
+        "search": "Recherche pour Prestation Profil",
+        "notFound": "Aucun Prestation Profil trouvé"
+      },
+      "created": "Un nouveau Prestation Profil a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Prestation Profil avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Prestation Profil avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Prestation Profil {{ id }} ?"
+      },
+      "detail": {
+        "title": "Prestation Profil"
+      },
+      "id": "ID",
+      "nbMoisPresta": "Nb Mois Presta",
+      "nbSemCongesEstime": "Nb Sem Conges Estime",
+      "dureeHebdo": "Duree Hebdo",
+      "dureeTeletravail": "Duree Teletravail",
+      "dureeReuAudio": "Duree Reu Audio",
+      "dureeReuVisio": "Duree Reu Visio",
+      "nbMailsSansPJ": "Nb Mails Sans PJ",
+      "nbMailsAvecPJ": "Nb Mails Avec PJ",
+      "veillePause": "Veille Pause",
+      "veilleSoir": "Veille Soir",
+      "veilleWeekend": "Veille Weekend",
+      "nbTerminaux": "Nb Terminaux",
+      "nbDeplacements": "Nb Deplacements",
+      "ecMensuelle": "Ec Mensuelle",
+      "ecTotalePreta": "Ec Totale Preta",
+      "ecTransportMensuel": "Ec Transport Mensuel",
+      "ecFabMateriel": "Ec Fab Materiel",
+      "ecUtilMaterielMensuel": "Ec Util Materiel Mensuel",
+      "ecCommMensuel": "Ec Comm Mensuel",
+      "profil": "Profil",
+      "prestation": "Prestation"
+    }
+  }
+}
